@@ -81,3 +81,78 @@ result
 
 result2 = lambda x: x*x
 print(result2(4))
+
+# %%
+# List
+
+list_number = [1,2,3,4,5,6]
+list_str = ["Monday", "Thourday", "Wednesday"]
+
+type(list_number)
+
+value = list_number[-1]
+value
+
+value_last_three = list_number[: 3]
+value_last_three
+
+# %%
+# List fonctions
+
+list_number = [1,2,3,4,5,6,4,2,7,8]
+# list_number.append(7) # .append => sona veri ekler 
+# list_number.reverse() # .revorse => ters çevirmekte kullanılır.
+list_number.sort()
+
+list_number
+
+# %%
+# Tuple
+
+t = (1,2,3,3,4,5,6)
+t.count(3)
+
+# %% 
+# Dictionary
+
+dictionary = {"ali" : 32, "Ayşe": 34, "Veli": 40}
+dictionary.keys()
+dictionary.values()
+dictionary["Veli"]
+
+# %%
+# QUIZZZ
+
+# verilen yılları kaçıncı yüzyıl olduğunu döndüren fonksiyonu yaz
+
+# input = yead >> 1 <= year <= 2005
+
+"""
+Year to centuary
+"""
+
+def year2Centuary(year):
+    str_year = str(year)
+    if len(str_year) < 3:
+        return 1
+    elif len(str_year) == 3:
+        if str_year[-2:] == "00":
+            return int(str_year[0])
+        else:
+            return int(str_year[0]) + 1
+    else:
+        if str_year[2:4] == "00":
+            return int(str_year[:2])
+        else:
+            return int(str_year[:2]) + 1
+
+print(year2Centuary(1881))  # 20
+
+# %%
+# Quız
+
+# Bir listeeki en küçük değeri almak istyoruz
+
+my_list = [4,6,8,9,4,63,2,543,6,547,456,435,2,0]
+my_list.sort()
+my_list[0]
